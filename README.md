@@ -1,4 +1,4 @@
-# Project Token 
+# Project Token
 ## Overview 
 This project is a simple "MyToken" progran that
 demosntrate a smart contract for creating and
@@ -6,18 +6,18 @@ managing a basic token named MyToken(TKN). t
 includes functionalities for minting new tokens
 and burning existing tokens.
 
-## Contract Details : 
-```solidity 
+## Contract Details :  
+```solidity
 contract MyToken {
           // Contract variables and functions 
 }
-
-## Public Variables :
+```
+## Public Variables 
 ```solidity 
 string public tokenName = "Token";
 string public tokenAbbrv = "TKN";
 uint public totalSupply = 0;
-
+```
 
 These public variables define properties of token,
 wherein tokenName represents the name of the
@@ -31,6 +31,7 @@ tokens exist in circulation.
 ## Mapping Variables :
 ```solidity 
 mapping(address => uint) public balance ;
+```
 
 Mapping defines the balances that associates Ethereum addresses with their respective balances.
 
@@ -40,12 +41,13 @@ function mint (address _recipient, uint) ;
                totalSupply += _amount ;
                balances[_recipient] += _amount ;
            }
+```
 
 The mint function in a token contract is typically
 used to create (or 'mint) new tokens and assign
 them to a specified recipient.
 
-## Burn Function:
+## Burn Function :
 ```solidity 
 function burn (address _recipient, uint) ;
                 if (balances[recipient] >= _amount ;
@@ -53,6 +55,7 @@ function burn (address _recipient, uint) ;
                 balances[recipient] >= _amount ;
         }
 }
+```
 
 This burn function used to remove (or "burn')
 esisting tokens from circulation, effectively
