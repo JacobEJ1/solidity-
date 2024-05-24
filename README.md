@@ -6,14 +6,14 @@ managing a basic token named MyToken(TKN). t
 includes functionalities for minting new tokens
 and burning existing tokens.
 
-### Contract Details : 
-'''solidity 
+## Contract Details : 
+```solidity 
 contract MyToken {
           // Contract variables and functions 
 }
 
-#### Public Variables :
-'''solidity 
+## Public Variables :
+```solidity 
 string public tokenName = "Token";
 string public tokenAbbrv = "TKN";
 uint public totalSupply = 0;
@@ -28,14 +28,14 @@ token. While the Total Supply represents the
 total supply of the token, indicating how many
 tokens exist in circulation.
 
-##### Mapping Variables :
-'''solidity 
+## Mapping Variables :
+```solidity 
 mapping(address => uint) public balance ;
 
 Mapping defines the balances that associates Ethereum addresses with their respective balances.
 
-###### Mint Function :
-'''solidity 
+## Mint Function :
+```solidity 
 function mint (address _recipient, uint) ;
                totalSupply += _amount ;
                balances[_recipient] += _amount ;
@@ -45,8 +45,8 @@ The mint function in a token contract is typically
 used to create (or 'mint) new tokens and assign
 them to a specified recipient.
 
-###### Burn Function:
-'''solidity 
+## Burn Function:
+```solidity 
 function burn (address _recipient, uint) ;
                 if (balances[recipient] >= _amount ;
                 totalSupply -= amount ; 
@@ -58,7 +58,7 @@ This burn function used to remove (or "burn')
 esisting tokens from circulation, effectively
 reducing the total token supply.
 
-###### License :
+## License :
 
 This Project is licensed under MIT license - see the
 LICENSE file for details.
