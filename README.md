@@ -2,7 +2,7 @@
 ## Overview 
 This project is a simple "MyToken" progran that
 demosntrate a smart contract for creating and
-managing a basic token named MyToken(TKN). t
+managing a basic token named MyToken(PSO). t
 includes functionalities for minting new tokens
 and burning existing tokens.
 
@@ -14,8 +14,8 @@ contract MyToken {
 ```
 ## Public Variables 
 ```solidity 
-string public tokenName = "Token";
-string public tokenAbbrv = "TKN";
+string public tokenName = "PESO";
+string public tokenAbbrv = "PSO";
 uint public totalSupply = 0;
 ```
 
@@ -30,14 +30,14 @@ tokens exist in circulation.
 
 ## Mapping Variables :
 ```solidity 
-mapping(address => uint) public balance ;
+mapping(address => uint) public balances;
 ```
 
 Mapping defines the balances that associates Ethereum addresses with their respective balances.
 
 ## Mint Function :
 ```solidity 
-function mint (address _recipient, uint) ;
+function mint (address _recipient, uint _ amount) public {
                totalSupply += _amount ;
                balances[_recipient] += _amount ;
            }
@@ -49,8 +49,8 @@ them to a specified recipient.
 
 ## Burn Function :
 ```solidity 
-function burn (address _recipient, uint) ;
-                if (balances[recipient] >= _amount ;
+function burn (address _recipient, uint _amount) public {
+                if (balances[recipient] >= _amount) {
                 totalSupply -= amount ; 
                 balances[recipient] >= _amount ;
         }
